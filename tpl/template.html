@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<style>
+*{font-family:Arial}
+h1 { border-bottom: solid 1px #8888aa; color: #0000FF; font: bold 14pt Arial; margin-bottom: 5px; }
+tr.odd { background: #E0E0F0; }
+tr.even { background: #F0F0FF; }
+table{ border: solid 1px #8888aa; border-collapse: collapse; margin-bottom: 2px; }
+th { font-size:8pt; font-family: Arial; text-align: left;}
+td{ font-size:8pt; font-family: Arial;padding:2px 3px 2px 3px;vertical-align:top; line-height:8pt;}
+div{font-size:9pt; font-family: Arial;}
+</style>
+</head>
+
+<body>
+<h1>Movies</h1>
+<table>
+    <tr><th>Title</th><th>Year</th></tr>
+    {% for movie in movies %}
+    <tr class={{ loop.cycle('odd', 'even') }}>
+    <td>{{movie[0]}}</td><td>{{movie[1]}}</td></tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

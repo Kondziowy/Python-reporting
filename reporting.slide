@@ -1,0 +1,68 @@
+﻿Kowalski, raport taktyczny!
+Generowanie raportów XLS, PDF i HTML w Pythonie
+29 Jun 2014
+Tags: jinja2, openpyxl, xls, pdf, html, pygda, presentation
+
+Konrad Brodzik
+Network Software Engineer, Intel NPG
+konrad+pygda@brodzik.it
+http://github.com/Kondziowy
+@lamafix
+
+* Oczekiwany efekt
+
+.image kowalski.jpg
+
+* Po co?
+
+- Raporty
+- Dyplomy
+- Interfejs korporacja-człowiek
+
+* Agenda
+
+1. HTML
+2. XLS
+3. PDF
+
+* HTML
+
+- słowo klucz - Templating
+- wiele frameworków - Django, Jinja 2, wheezy.template
+- sprowadzają się do tego samego - HTML z wstawkami
+
+* Jinja - template
+.code tpl/template.html /body/,/html/
+
+* Jinja - code
+.play jinja.py
+
+* XLS
+
+- jest trudniej, format binarny
+- dwie główne biblioteki - xlwt, pyopenxl
+- niezłe wsparcie - wykresy, style, makra
+- podobne API, ze względu na wydajność openpyxl > > > reszta
+
+* XLS - wrapper
+
+.play excel_helper.py /Use/,/Done/
+
+* PDF
+
+- Przyjazny dla użytkownika, paskudny dla programisty
+- Dużo opcji - z HTMLa albo natywnie
+
+* ReportLab
+
+.play rl.py
+
+* PdfKit
+
+.play pdfk.py
+
+* Przydatne linki
+
+- https://bitbucket.org/rptlab/reportlab
+- http://www.blog.pythonlibrary.org/2010/03/08/a-simple-step-by-step-reportlab-tutorial/
+- https://pypi.python.org/pypi/pdfkit
